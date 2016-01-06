@@ -1,0 +1,105 @@
+div{
+	border: 1px solid chocolate;
+}
+
+/*container styles*/
+.content{
+	width: 30em;
+	margin:auto;
+}
+
+.input_container{
+	height: 1.5em;
+	margin: .5em 1.5em .5em 1.5em;
+}
+
+.button_container{
+	height: 1.5em;
+}
+
+/*category unorder list style*/
+ul{
+	list-style-type: none;
+}
+
+ul.category li>div{
+	width: 22em;
+	height: 1.8em;
+	margin: 0.5em 0 0 0;
+	color: white;
+}
+ul.category li:nth-child(1)>div{
+	background-color: #a349a4;
+}
+ul.category li:nth-child(2)>div{
+	background-color: #305bdc;
+}
+ul.category li:nth-child(3)>div{
+	background-color: #e72359;
+}
+
+.icon-th-list{
+	float:right;
+}
+/*item list style*/
+table.itemList{
+	width: 20em;
+	border: 2px solid #000;
+	margin-left: 0.5em;
+	border-collapse: collapse;
+}
+
+td.first{
+	width: 70%;
+	border-bottom: 1px solid grey;
+}
+td.second{
+	width: 30%;
+	border-bottom: 1px solid grey;
+}
+
+/*custom checkbox style*/
+:root input[type=checkbox]{
+	/*move original checkbox out of viewport*/
+	position: absolute;
+	left:-100em;
+}
+
+:root input[type=checkbox]+label:before{
+	/*content: url("../image/checkbox-sprite.png");*/
+	content: "";
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin: 0 .5em 0 0;
+	background: url("../image/checkbox-sprite.png") no-repeat;
+	vertical-align: bottom;
+	position: relative;
+	bottom: 2px;
+}
+
+:root input[type=checkbox]:checked+label:before{
+	background-position: 0 -16px;
+}
+
+:root input[type=checkbox]:disabled+label:before{
+	background-position: 0 -32px;
+}
+
+:root input[type=checkbox]:checked:disabled+label:before{
+	background-position: 0 -48px;
+}
+
+/*icon style*/
+i.icon-cancel-circled{
+	color:red;
+}
+
+
+/*clear button style*/
+.button_container button{
+	position: relative;
+	left:28em;
+	padding: .3em 1em;
+	border-radius: .8em;
+}

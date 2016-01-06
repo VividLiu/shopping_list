@@ -1,0 +1,88 @@
+<!Doctype>
+<html>
+<head>
+	<title>Shopping List</title>
+	<link rel="stylesheet" type="text/css" href="css/fontello.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="content">
+		<div class="input_container">
+			<form>
+				<input type="text" name="input" placeholder="Enter shopping item">
+				<select>
+					<option value="">-- Add to --</option>
+					<option value="vegetable">Vegetable</option>
+					<option value="meat">Meat</option>
+					<option value="diary">Diary</option>
+				</select>
+				<button type="submit" value="add" onclick="addItem()">+</button>
+			</form>
+		</div>
+		<div class="list_container">
+			<ul class="category">
+				<li>
+					<div>
+						<span>Vegetable</span>
+						<i class="icon-th-list"></i>
+					</div>
+					<table class="itemList" >
+						<tr>
+							<td class="first">
+								<!--form -->
+								<input type="checkbox" id="brocolli" value="brocolli">
+								<label for="brocolli">Brocolli</label>
+								<!-- </form> -->
+							</td>
+							<td class="second">
+								<span>x&nbsp</span>
+								<select>
+									<option value="">--</option>
+									<option value="1">1</option>
+								</select>
+								<i class="icon-cancel-circled"></i>								
+							</td>
+						</tr>
+						<tr>
+							<td class="first">
+								<!--form -->
+								<input type="checkbox" id="tomato" value="tomato">
+								<label for="tomato">Tomato</label>
+								<!-- </form> -->
+							</td>
+							<td class="second">
+								<span>x&nbsp</span>
+								<select>
+									<option value="">--</option>
+									<option value="1">1</option>
+								</select>
+								<i class="icon-cancel-circled"></i>								
+							</td>
+						</tr>
+					</table>
+				</li>
+
+				<li>
+					<div>
+						<span>Meat</span>
+						<i class="icon-th-list"></i>
+					</div>
+				</li>
+
+				<li>
+					<div>
+						<span>Diary</span>
+						<i class="icon-th-list"></i>
+					</div>
+
+				</li>
+
+			</ul>
+		</div>
+		<div class="button_container">
+			<button type="button">Clear</button>			
+		</div>
+	</div>
+	<script type="text/javascript" src="script/script.js"></script>
+</body>
+</html>
