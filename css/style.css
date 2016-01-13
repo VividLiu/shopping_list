@@ -1,5 +1,5 @@
 div{
-	border: 1px solid chocolate;
+	/*border: 1px solid chocolate;*/
 }
 
 /*container styles*/
@@ -9,24 +9,44 @@ div{
 }
 
 .input_container{
-	height: 1.5em;
-	margin: .5em 1.5em .5em 1.5em;
+	height: 2em;
+	margin: .5em .5em .5em 3em;
 }
 
 .button_container{
 	height: 1.5em;
 }
 
+
+/*input form style*/
+:root input[type="text"]{
+	border: 2px solid black;
+	border-radius: 10px;
+	padding:.5em 1.5em; /*use padding to control size of input box rather than height & width*/
+}
+
+.input_container select{
+	border: 2px solid black;
+	border-radius: 5px;
+}
 /*category unorder list style*/
 ul{
 	list-style-type: none;
 }
 
 ul.category li>div{
-	width: 22em;
+	width: 21em;
 	height: 1.8em;
 	margin: 0.5em 0 0 0;
 	color: white;
+	border-radius: 8px 8px 0px 0px;
+	padding: 0 0.5em;
+}
+ul.category li>div>span{
+	line-height: 28px; /*in order to move the line a down since inline element doesn't have box model*/
+}
+ul.category li>div span:nth-child(2){
+	display: none;
 }
 ul.category li:nth-child(1)>div{
 	background-color: #a349a4;
@@ -94,7 +114,9 @@ td.second{
 i.icon-cancel-circled{
 	color:red;
 }
-
+i.icon-th-list{
+	padding: 0.5em 0 0 0;
+}
 
 /*clear button style*/
 .button_container button{

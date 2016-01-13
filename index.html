@@ -9,21 +9,22 @@
 	<div class="content">
 		<div class="input_container">
 			<form>
-				<input type="text" name="input" placeholder="Enter shopping item">
-				<select>
+				<input id="addInput" type="text" name="input" placeholder="Enter shopping item">
+				<select id="addSelect">
 					<option value="">-- Add to --</option>
 					<option value="vegetable">Vegetable</option>
 					<option value="meat">Meat</option>
 					<option value="diary">Diary</option>
 				</select>
-				<button type="submit" value="add" onclick="addItem()">+</button>
+				<button type="button" id="addButton" value="add" onclick="addItem()">+</button>
 			</form>
 		</div>
 		<div class="list_container">
-			<ul class="category">
-				<li>
+			<ul  class="category">
+				<li id="vegetable">
 					<div>
 						<span>Vegetable</span>
+						<span>(2 items)</span>
 						<i class="icon-th-list"></i>
 					</div>
 					<table class="itemList" >
@@ -33,7 +34,7 @@
 								<input type="checkbox" id="brocolli" value="brocolli">
 								<label for="brocolli">Brocolli</label>
 								<!-- </form> -->
-							</td>
+							 </td>
 							<td class="second">
 								<span>x&nbsp</span>
 								<select>
@@ -62,27 +63,34 @@
 					</table>
 				</li>
 
-				<li>
+				<li id="meat">
 					<div>
 						<span>Meat</span>
+						<span>(0 items)</span>
 						<i class="icon-th-list"></i>
 					</div>
+					<table class="itemList" >
+					</table>
 				</li>
 
-				<li>
+				<li id="diary">
 					<div>
 						<span>Diary</span>
+						<span>(0 items)</span>
 						<i class="icon-th-list"></i>
 					</div>
-
+					<table class="itemList">
+						
+					</table>
 				</li>
 
 			</ul>
 		</div>
 		<div class="button_container">
-			<button type="button">Clear</button>			
+			<button id="clrButton" type="button" onclick="clear();">Clear</button>			
 		</div>
 	</div>
+	<script type="text/javascript" src="script/jquery-2.1.4.js"></script>
 	<script type="text/javascript" src="script/script.js"></script>
 </body>
 </html>
